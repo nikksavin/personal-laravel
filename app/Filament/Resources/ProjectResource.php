@@ -41,6 +41,7 @@ class ProjectResource extends Resource
                                     ->required()
                                     ->debounce()
                                     ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                                Forms\Components\FileUpload::make('cover'),
                                 Forms\Components\TextInput::make('slug')
                                     ->readOnly()
                                     ->required(),
@@ -86,6 +87,7 @@ class ProjectResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('slug'),
+                Tables\Columns\ImageColumn::make('cover')->square(),
                 Tables\Columns\TextColumn::make('category.title'),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime('Y-m-d H:i:s')

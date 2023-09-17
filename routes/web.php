@@ -27,10 +27,7 @@ Route::get('/', function()
 });
 
 
-Route::get('/projects', function()
-{
-    return View::make('pages.projects');
-});
+Route::get('/projects',[ProjectController::class, 'index']);
 
 
 
