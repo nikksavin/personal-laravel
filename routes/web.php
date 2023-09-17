@@ -15,8 +15,25 @@ use App\Http\Controllers\ProjectController;
 
 //Route::get('/', \App\Http\Controllers\HomePageController::class);
 
-Route::get('/projects', [ProjectController::class, 'index']);
+//Route::get('/projects', [ProjectController::class, 'index']);
 //
 //Route::get('/projects', function () {
 //    return view('welcome');
 //});
+
+Route::get('/', function()
+{
+    return View::make('pages.home');
+});
+
+
+Route::get('/projects', function()
+{
+    return View::make('pages.projects');
+});
+
+
+
+
+
+
