@@ -21,7 +21,8 @@ class Project extends Model
         'slug',
         'content',
         'published_at',
-        'cover'
+        'cover',
+//        'active'
     ];
 
     public function category(): BelongsTo
