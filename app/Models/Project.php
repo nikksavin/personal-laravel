@@ -22,7 +22,7 @@ class Project extends Model
         'content',
         'published_at',
         'cover',
-//        'active'
+        'active'
     ];
 
     public function category(): BelongsTo
